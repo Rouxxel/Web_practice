@@ -4,31 +4,57 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/*Font file access*/
+@font-face {
+    font-family: 'Jacquarda Bastarda 9';  /*Name*/
+    src: url('fonts/Jacquarda_Bastarda_9/JacquardaBastarda9-Regular.ttf') 
+        format('truetype');
+}
+@font-face {
+    font-family: 'Quantico';
+    src: url('fonts/Quantico/Quantico-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Oswald';
+    src: url('fonts/Oswald/Oswald-VariableFont_wght.ttf') format('truetype');
+}
+
+/*-----------------------------------------------------------------------------------------------*/
 html, body {
     margin: 0;
     padding: 0;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Quantico', sans-serif;
     font-weight: normal;
     font-style: normal;
     font-size: 20px;
 }
 
+/*-----------------------------------------------------------------------------------------------*/
 /*Header styling*/
 .header {
-    background-color: rgb(165, 148, 249);
+    background: linear-gradient(to bottom right, 
+        rgb(130, 17, 49), rgb(199, 37, 62), 
+        rgb(232, 92, 13),rgb(250, 188, 63)); /* Gradient from top left to bottom right */
     padding: 10px;
     text-align: center;
     display: flex; /*make containers to be in a row*/
-    justify-content: space-between;  /*maximize space between containers*/
-    align-items: end; /*make containers be bound to the bottom of header*/
+    justify-content: space-between;  /*horizontally maximize space between containers*/
+    align-items: center; /*Vertically change contents*/
+    position: relative;
 }
 
 /*Logo name container and inners*/
 .logo_name{
     /*background-color: rgb(255, 255, 255);*/
-    text-align: center;
-    display: flex;
-    align-items: center;
+    gap: 10px;
+    padding: 10px;
+
+    display: flex;                /*Enables flexbox*/
+    flex-direction: row;          /*Flex is in a row*/
+    justify-content: center;      /*Horizontally center the contents*/
+    align-items: center;          /*Vertically center the contents*/
+    text-align: center;           /* if you want to center text inside containers*/
 }
 
 .logo_name img {
@@ -36,27 +62,133 @@ html, body {
     width: auto;
 }
 
-.logo_name h1 {
-    padding-left: 10px;
-    font-size: 25px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-style: normal;
-    font-weight: normal;
+#main_title{
+    font-family: 'Jacquarda Bastarda 9', sans-serif;
+    font-size: 42px;
 }
 
-/*Navigation bar container and inners*/
+/*Navigation bar and items*/
 .nav_bar{
-    background-color: aliceblue;
-    float: left;
-    align-items: center;
-    
+    /*background-color: rgb(255, 255, 255); /*Background for testing*/
+    display: grid;                      /*Enables flexbox*/
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-between;     /*Horizontally center the contents*/
+    align-items: center;                /*Vertically center the contents*/
+    /*padding: 10px 10px 5px 10px; /* Padding: top 10px, right 10px, bottom 0px, left 10px */
+    gap: 0px;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
 
+/* Styling the individual links */
+.nav_bar a {
+    background-color: rgb(199, 37, 62, 0.2); /* Semi-transparent background color */
+    border: 2px solid black;                 /* Black border around each grid item */
+    
+    text-align: center;                      /* Center text inside links */
+    display: flex;                           /* Make the links behave like flex items */
+    flex-direction: row;                     /*Ensure flexbox is in a row*/
+    align-items: center;                     /* Vertically center the items */
+    justify-content: center;                 /* Horizontally center the items */
+
+    color: black;                                 /* Text color for the links */
+    padding: 3px;                                   /* Internal padding for links */
+    text-decoration: none;                          /* Remove underline from links */
+    font-size: 15px;
+}
+
+/* Add hover effect */
+.nav_bar a:hover {
+    background-color: rgb(199, 37, 62);      /* Darker background color on hover */
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+/*Footer Styling*/
+footer{
+    background: linear-gradient(to bottom left, 
+        rgb(130, 17, 49), rgb(199, 37, 62), 
+        rgb(232, 92, 13),rgb(250, 188, 63)); /* Gradient from top left to bottom right */
+    padding: 10px;
+
+    display: flex;                
+    flex-direction: column;             /* items organized in a column */
+    justify-content: center;            /* Vertically center the items */
+    align-items: center;                /* Horizontally center the items */
+    text-align: center;                 /* Ensure text is centered*/
+    gap: 15px;
+}
+
+/*Social media logos row*/
+.socials_img_row{
+    /*background-color: aliceblue;/**/
+    display: flex;
+    flex-direction: row;
+    padding: 0px 10px 0px 10px;
+
+    gap: 30px;
+}
+
+.socials_img_row img{
+    height: 40px;
+    width: auto;
+}
+
+/*Worldwide locations row*/
+.worldwide_locations {
+    /*background-color: aliceblue; /**/
+    display: flex;
+    flex-direction: row;
+    padding: 0px 10px 0px 10px;
+
+    gap: 5px;
+}
+
+.worldwide_locations a, .worldwide_locations h4{
+    text-align: center;                      /* Center text inside links */
+    display: flex;                           /* Make the links behave like flex items */
+    flex-direction: row;                     /*Ensure flexbox is in a row*/
+    align-items: center;                     /* Vertically center the items */
+    justify-content: center;                 /* Horizontally center the items */
+
+    color: black; 
+    /*color: rgb(250, 188, 63);                     /* Text color for the links */
+    padding: 3px;                                   /* Internal padding for links */
+    text-decoration: underline;                          /* Remove underline from links */
     font-size: 20px;
 }
 
-.nav_bar a {
+/*Rights reserved text*/
+.rights_text{
+    /*background-color: aliceblue;/**/
+    font-weight: normal;
+
+    color: black; 
+    /*color: rgb(250, 188, 63);                     /* Text color for the links */
+    padding: 3px;                                   /* Internal padding for links */
+    font-size: 20px;
 }
 
-.nav_bar a:hover {
-    background-color: blueviolet;
+/*Terms and conditions row*/
+.policies_row {
+    /*background-color: aliceblue; /**/
+    display: flex;
+    flex-direction: row;
+    padding: 0px 10px 0px 10px;
+
+    gap: 5px;
+}
+
+.policies_row a, .policies_row h4{
+    text-align: center;                      /* Center text inside links */
+    display: flex;                           /* Make the links behave like flex items */
+    flex-direction: row;                     /*Ensure flexbox is in a row*/
+    align-items: center;                     /* Vertically center the items */
+    justify-content: center;                 /* Horizontally center the items */
+
+    color: black; 
+    /*color: rgb(250, 188, 63);                     /* Text color for the links */
+    padding: 3px;                                   /* Internal padding for links */
+    text-decoration: underline;                          /* Remove underline from links */
+    font-size: 20px;
 }
