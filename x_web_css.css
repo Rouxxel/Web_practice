@@ -1,0 +1,62 @@
+/*Reset CSS styling*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+}
+
+/*Header styling*/
+.header {
+    background-color: rgb(165, 148, 249);
+    padding: 10px;
+    text-align: center;
+    display: flex; /*make containers to be in a row*/
+    justify-content: space-between;  /*maximize space between containers*/
+    align-items: end; /*make containers be bound to the bottom of header*/
+}
+
+/*Logo name container and inners*/
+.logo_name{
+    /*background-color: rgb(255, 255, 255);*/
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.logo_name img {
+    height: 45px;
+    width: auto;
+}
+
+.logo_name h1 {
+    padding-left: 10px;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+/*Navigation bar container and inners*/
+.nav_bar{
+    background-color: aliceblue;
+    float: left;
+    align-items: center;
+    
+
+    font-size: 20px;
+}
+
+.nav_bar a {
+}
+
+.nav_bar a:hover {
+    background-color: blueviolet;
+}
