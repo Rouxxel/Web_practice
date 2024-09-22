@@ -28,17 +28,19 @@ html, body {
     font-weight: normal;
     font-style: normal;
     font-size: 20px;
+    position: relative;
 }
 
 /*-----------------------------------------------------------------------------------------------*/
 /*Header styling*/
 .header {
     background: linear-gradient(to bottom right, 
-        rgb(130, 17, 49), rgb(199, 37, 62), 
-        rgb(232, 92, 13),rgb(250, 188, 63)); /* Gradient from top left to bottom right */
+        rgb(0, 31, 63), rgb(58, 109, 140), 
+        rgb(106, 154, 176)); /* Gradient from top left to bottom right */
     padding: 10px;
     text-align: center;
     display: flex; /*make containers to be in a row*/
+    flex-direction: row;          /*Flex is in a row*/
     justify-content: space-between;  /*horizontally maximize space between containers*/
     align-items: center; /*Vertically change contents*/
     position: relative;
@@ -48,7 +50,7 @@ html, body {
 .logo_name{
     /*background-color: rgb(255, 255, 255);*/
     gap: 10px;
-    padding: 10px;
+    padding: 1px;
 
     display: flex;                /*Enables flexbox*/
     flex-direction: row;          /*Flex is in a row*/
@@ -70,25 +72,26 @@ html, body {
 /*Navigation bar and items*/
 .nav_bar{
     /*background-color: rgb(255, 255, 255); /*Background for testing*/
-    display: grid;                      /*Enables flexbox*/
-    grid-template-columns: repeat(5, 1fr);
+    display: grid;                      /*Enables grid*/
+    grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;     /*Horizontally center the contents*/
     align-items: center;                /*Vertically center the contents*/
     /*padding: 10px 10px 5px 10px; /* Padding: top 10px, right 10px, bottom 0px, left 10px */
     gap: 0px;
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     right: 10px;
 }
 
 /* Styling the individual links */
 .nav_bar a {
-    background-color: rgb(199, 37, 62, 0.2); /* Semi-transparent background color */
-    border: 2px solid black;                 /* Black border around each grid item */
+    background-color: rgb(234, 216, 177, 0.65); /* Semi-transparent background color */
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: none;
     
     text-align: center;                      /* Center text inside links */
-    display: flex;                           /* Make the links behave like flex items */
-    flex-direction: row;                     /*Ensure flexbox is in a row*/
     align-items: center;                     /* Vertically center the items */
     justify-content: center;                 /* Horizontally center the items */
 
@@ -100,15 +103,26 @@ html, body {
 
 /* Add hover effect */
 .nav_bar a:hover {
-    background-color: rgb(199, 37, 62);      /* Darker background color on hover */
+    background-color: rgb(234, 216, 177);      /* Darker background color on hover */
+}
+
+/*Date and time text*/
+.date_time{
+    display: flex;
+    flex-direction: row; 
+
+    font-size: 20px;
+
+    gap: 5px;
+    padding: 1px;
 }
 
 /*-----------------------------------------------------------------------------------------------*/
 /*Footer Styling*/
-footer{
-    background: linear-gradient(to bottom left, 
-        rgb(130, 17, 49), rgb(199, 37, 62), 
-        rgb(232, 92, 13),rgb(250, 188, 63)); /* Gradient from top left to bottom right */
+.footer{
+    background: linear-gradient(to bottom right, 
+        rgb(0, 31, 63), rgb(58, 109, 140), 
+        rgb(106, 154, 176)); /* Gradient from top left to bottom right */
     padding: 10px;
 
     display: flex;                
@@ -192,3 +206,136 @@ footer{
     text-decoration: underline;                          /* Remove underline from links */
     font-size: 20px;
 }
+
+/*-----------------------------------------------------------------------------------------------*/
+/*Main content*/
+.main_content{
+    background: linear-gradient(to bottom left, 
+    rgb(106, 154, 176), rgb(58, 109, 140),
+    rgb(0, 31, 63)); /* Gradient from top left to bottom right */
+    padding: 20px 80px 20px 80px; 
+}
+
+/*Main container*/
+.main_container{
+    background-color: rgb(234, 216, 177);/*background-color: rgb(232, 92, 13);/**/
+    padding: 20px;
+    border-radius: 10px;
+    border: 2.5px solid rgb(174, 161, 133);
+}
+
+.main_title{
+    font-size: 80px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.subtext_main_title{
+    display: flex;
+    flex-direction: row;
+
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0px 0px 0px 0px;
+    position: relative;
+    top: -20px; /* Move the subtext closer by reducing the space */
+}
+
+.article_side{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.main_paragraph {
+    flex-grow: 2; /* This item will take up more space */
+}
+
+.side_paragraph {
+    flex-grow: 1; /* This item will take up less space */
+
+    font-size: 17px;
+
+    padding: 10px;
+
+    background-color: rgb(174, 161, 133);
+    border-radius: 10px;
+    border: 2.5px solid rgb(133, 123, 102);
+
+}
+
+/*Second container*/
+.second_container{
+    background-color: rgb(234, 216, 177);/*background-color: rgb(232, 92, 13);/**/
+    padding: 20px;
+    border-radius: 10px;
+    border: 2.5px solid rgb(174, 161, 133);
+
+    margin-top: 20px;
+}
+
+.second_main_title{
+    font-size: 80px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.second_article{
+
+    display: flex;                /* Enables flexbox layout */
+    flex-direction: column;        /* Stacks items vertically */
+    align-items: center;           /* Centers items horizontally */
+    text-align: left;            /* Ensures text is centered */
+
+
+}
+
+.buttons_image {
+    display: flex;                 /* Enables flexbox layout */
+    flex-direction: column;           /* Align items in a row (horizontally) */
+    align-items: center;           /* Center items vertically */
+    justify-content: center;       /* Center items horizontally */
+    gap: 10px;                     /* Adds space between buttons and image */
+    text-align: center;            /* Ensure text is centered */
+
+    padding: 20px; 
+}
+
+.img_author {
+    display: flex;
+    flex-direction: column;        /* Ensures caption is below the image */
+    align-items: center;           /* Centers image and caption */
+    justify-content: center; /* Center image and caption */
+    text-align: center; /* Ensure text is centered */
+}
+
+#ship_sprite {
+    height: 450px;                 /* Adjust image height */
+    width: auto;                   /* Preserve aspect ratio */
+}
+
+.image_caption {
+    font-size: 16px;               /* Smaller text for caption */
+    color: rgb(77, 77, 77);
+}
+
+.l_arrow_button, .r_arrow_button {
+    background-color: rgb(58, 109, 140);     /* Styling the buttons */
+    color: white;
+    padding: 10px;
+    border: 2px solid rgb(0, 31, 63);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.l_arrow_button:hover, .r_arrow_button:hover {
+    background-color: rgb(106, 154, 176);     /* Change color on hover */
+}
+
+
