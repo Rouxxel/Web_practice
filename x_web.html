@@ -38,16 +38,26 @@
                 <a href="x_web_credits.html">Credits</a>
             </div>
             <div class="date_time">
-                <div>
-                    HH:MM 24H
-                </div>
-                <div>
-                    |
-                </div>
-                <div>
-                    DD/MM/YY
+                <div class="date_time">
+                    <div class="time" id="times_display">
+                        HH:MM 24H <!-- This will be updated by JavaScript -->
+                    </div>
+                    <div>
+                        |
+                    </div>
+                    <div class="date" id="date_display">
+                        DD/MM/YY <!-- You can also update this if you want -->
+                    </div>
                 </div>
             </div>
+            <!-- Call functions to update date and time -->
+            <script>
+                get_current_time();
+                get_current_date();
+
+                setInterval(get_current_time, 60000); // Updates every 60 seconds (60000 milliseconds)
+                setInterval(get_current_date, 60000);
+            </script>
         </header>
 
         <!-- Header-body separation line -->
@@ -91,13 +101,14 @@
 
                     <div class="buttons_image">
                         <div class="img_author">
-                            <img src="imgs\playership.png" alt="sprite" id="ship_sprite">
-                            <div class="image_caption">Image by: Author Name</div> <!-- Subtext below image -->
+                            <img src="imgs/playership.png" alt="sprite here" id="ship_sprite">
+                            <!-- Subtext below image -->
+                            <div class="image_caption" id="image_caption">Image by: John Doe</div> 
                         </div>
                         
                         <div class="buttons">
-                            <button class="l_arrow_button">&larr;</button> <!-- Right Arrow -->
-                            <button class="r_arrow_button">&rarr;</button> <!-- Right Arrow -->
+                            <button class="l_arrow_button" onclick="update_image('left')">&larr;</button> <!-- Right Arrow -->
+                            <button class="r_arrow_button" onclick="update_image('right')">&rarr;</button> <!-- Right Arrow -->
                         </div>
                     </div>
 
