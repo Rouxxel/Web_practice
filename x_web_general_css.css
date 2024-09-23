@@ -69,6 +69,15 @@ html, body {
     font-size: 42px;
 }
 
+.current_page{
+    /*background-color: aliceblue;/**/
+    font-size: 30px;
+    font-weight: bold;
+    font-style: normal;
+    
+    padding: 4px;
+}
+
 /*Navigation bar and items*/
 .nav_bar{
     /*background-color: rgb(255, 255, 255); /*Background for testing*/
@@ -216,126 +225,8 @@ html, body {
     padding: 20px 80px 20px 80px; 
 }
 
-/*Main container*/
-.main_container{
-    background-color: rgb(234, 216, 177);/*background-color: rgb(232, 92, 13);/**/
-    padding: 20px;
-    border-radius: 10px;
-    border: 2.5px solid rgb(174, 161, 133);
-}
-
-.main_title{
-    font-size: 80px;
-    font-weight: bold;
-    font-style: normal;
-}
-
-.subtext_main_title{
-    display: flex;
-    flex-direction: row;
-
-    font-size: 15px;
-    font-weight: normal;
-    font-style: normal;
-    margin: 0px 0px 0px 0px;
-    position: relative;
-    top: -20px; /* Move the subtext closer by reducing the space */
-}
-
-.article_side{
-    display: flex;
-    flex-direction: row;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 15px;
-}
-
-.main_paragraph {
-    flex-grow: 2; /* This item will take up more space */
-}
-
-.side_paragraph {
-    flex-grow: 1; /* This item will take up less space */
-
-    font-size: 17px;
-
-    padding: 10px;
-
-    background-color: rgb(174, 161, 133);
-    border-radius: 10px;
-    border: 2.5px solid rgb(133, 123, 102);
-
-}
-
-/*Second container*/
-.second_container{
-    background-color: rgb(234, 216, 177);/*background-color: rgb(232, 92, 13);/**/
-    padding: 20px;
-    border-radius: 10px;
-    border: 2.5px solid rgb(174, 161, 133);
-
-    margin-top: 20px;
-}
-
-.second_main_title{
-    font-size: 80px;
-    font-weight: bold;
-    font-style: normal;
-}
-
-.second_article{
-
-    display: flex;                /* Enables flexbox layout */
-    flex-direction: column;        /* Stacks items vertically */
-    align-items: center;           /* Centers items horizontally */
-    text-align: left;            /* Ensures text is centered */
 
 
-}
 
-.buttons_image {
-    display: flex;                 /* Enables flexbox layout */
-    flex-direction: column;           /* Align items in a row (horizontally) */
-    align-items: center;           /* Center items vertically */
-    justify-content: center;       /* Center items horizontally */
-    gap: 10px;                     /* Adds space between buttons and image */
-    text-align: center;            /* Ensure text is centered */
-
-    padding: 20px; 
-}
-
-.img_author {
-    display: flex;
-    flex-direction: column;        /* Ensures caption is below the image */
-    align-items: center;           /* Centers image and caption */
-    justify-content: center; /* Center image and caption */
-    text-align: center; /* Ensure text is centered */
-}
-
-#ship_sprite {
-    height: 450px;                 /* Adjust image height */
-    width: auto;                   /* Preserve aspect ratio */
-}
-
-.image_caption {
-    font-size: 16px;               /* Smaller text for caption */
-    color: rgb(77, 77, 77);
-}
-
-.l_arrow_button, .r_arrow_button {
-    background-color: rgb(58, 109, 140);     /* Styling the buttons */
-    color: white;
-    padding: 10px;
-    border: 2px solid rgb(0, 31, 63);
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.l_arrow_button:hover, .r_arrow_button:hover {
-    background-color: rgb(106, 154, 176);     /* Change color on hover */
-}
 
 

@@ -16,14 +16,15 @@
         <meta name="copyright" content="copyright here">
 
         <!-- External files and srcs -->
-        <link rel="stylesheet" href="x_web_css.css">
+        <link rel="stylesheet" href="x_web_general_css.css"><!-- Shared CSS -->
+        <link rel="stylesheet" href="x_web_home_css.css"><!-- Specific CSS -->
         <link rel="icon" type="image/x-icon" href="imgs\logo.ico">
     </head>
 
     <!-- Web page itself -->
     <body>
         <!-- JavaScript file link -->
-        <script src="x_web_js.js"></script> 
+        <script src="x_web_all_js.js"></script> 
 
         <!-- Header with title, logo and navigation -->
         <header class="header">
@@ -31,10 +32,13 @@
                 <img src="imgs\logo.png" alt="Logo" id="logo_file">
                 <h1 id="main_title">Web X</h1>
             </div>
+            <div class="current_page">
+                Home
+            </div>
             <div class="nav_bar">
-                <a href="url_here">About us</a>
+                <a href="#">Home</a>
+                <a href="x_web_about_us.html">About us</a>
                 <a href="url_here">Contact us</a>
-                <a href="url_here">Services</a>
                 <a href="x_web_credits.html">Credits</a>
             </div>
             <div class="date_time">
@@ -55,7 +59,7 @@
                 get_current_time();
                 get_current_date();
 
-                setInterval(get_current_time, 60000); // Updates every 60 seconds (60000 milliseconds)
+                setInterval(get_current_time, 10000); // Updates every 10 seconds (60000 milliseconds)
                 setInterval(get_current_date, 60000);
             </script>
         </header>
@@ -101,9 +105,12 @@
 
                     <div class="buttons_image">
                         <div class="img_author">
-                            <img src="imgs/playership.png" alt="sprite here" id="ship_sprite">
-                            <!-- Subtext below image -->
-                            <div class="image_caption" id="image_caption">Image by: John Doe</div> 
+                            <figure class="img_fig">
+                                <img src="imgs/playership.png" alt="sprite here" id="ship_sprite">
+                                <figcaption class="image_caption" id="image_caption">
+                                    Image by: John Doe
+                                </figcaption>
+                            </figure>
                         </div>
                         
                         <div class="buttons">

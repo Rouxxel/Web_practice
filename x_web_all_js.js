@@ -33,8 +33,8 @@ function get_current_date(){
 }
 
 /*Image and subtext update functions*/
-let img_files=["imgs/playership.png","imgs/enemyship.png","imgs/enemyship2.png"];
-let img_subtexts=["Image by: John Doe", "Image by: Jane Doe", "Image by: Jan Doe"];
+const img_files=["imgs/playership.png","imgs/enemyship.png","imgs/enemyship2.png"];
+const img_subtexts=["Image by: John Doe", "Image by: Jane Doe", "Image by: Jan Doe"];
 let indx=0;
 
 function update_image(button_dir){
@@ -59,4 +59,6 @@ function update_image(button_dir){
     //Update the subtext
     document.getElementById('image_caption').innerText = img_subtexts[indx];
 }
+
+/*Page dialogs*/
 
