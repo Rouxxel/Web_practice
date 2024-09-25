@@ -17,7 +17,7 @@
 
         <!-- External files and srcs -->
         <link rel="stylesheet" href="x_web_general_css.css"><!-- Shared CSS -->
-        <link rel="stylesheet" href="x_web_about_us_css.css"><!-- Specific CSS -->
+        <link rel="stylesheet" href="x_web_contact_us_css.css"><!-- Specific CSS -->
         <link rel="icon" type="image/x-icon" href="imgs\logo.ico">
     </head>
 
@@ -33,12 +33,12 @@
                 <h1 id="main_title">Web X</h1>
             </div>
             <div class="current_page">
-                About Us
+                Contact Us
             </div>
             <div class="nav_bar">
                 <a href="x_web_home.html">Home</a>
-                <a href="#">About us</a>
-                <a href="x_web_contact_us.html">Contact us</a>
+                <a href="x_web_about_us.html">About us</a>
+                <a href="#">Contact us</a>
                 <a href="x_web_credits.html">Credits</a>
             </div>
             <div class="date_time">
@@ -69,53 +69,39 @@
 
         <!-- Whole actual body -->
         <div class="main_content">
-            <div class="our_mission">
-                <h1 class="our_mission_title">Our Mission</h1>
-                <p class="our_mission_prgph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-            </div>
-
-            <div class="team_members">
-                <div class="member">
-                    <img src="imgs\pfp.png" alt="team_member" id="member_img_file">
-                    <h5 class="member_name">John Doe</h5>
-                    <h6 class="poisition">CEO</h6>
-                    <h6 class="phone_num">+49 123 12345678</h6>
-                    <h6 class="email_addr">dummyemail@xmail.com</h6>
-                </div>
-
-                <div class="member">
-                    <img src="imgs\pfp.png" alt="team_member" id="member_img_file">
-                    <h5 class="member_name">Jane Doe</h5>
-                    <h6 class="poisition">CTO</h6>
-                    <h6 class="phone_num">+49 123 12345678</h6>
-                    <h6 class="email_addr">dummyemail@xmail.com</h6>
-                </div>
-
-                <div class="member">
-                    <img src="imgs\pfp.png" alt="team_member" id="member_img_file">
-                    <h5 class="member_name">Janet Doe</h5>
-                    <h6 class="poisition">Marketing Manager</h6>
-                    <h6 class="phone_num">+49 123 12345678</h6>
-                    <h6 class="email_addr">dummyemail@xmail.com</h6>
-                </div>
-
-                <div class="member">
-                    <img src="imgs\pfp.png" alt="team_member" id="member_img_file">
-                    <h5 class="member_name">Johnathan Doe</h5>
-                    <h6 class="poisition">HR Manager</h6>
-                    <h6 class="phone_num">+49 123 12345678</h6>
-                    <h6 class="email_addr">dummyemail@xmail.com</h6>
-                </div>
-                
-            </div>
-
-            <div class="thunder_video_prgrph">
-                <h1 class="video_title">Video here</h1>
-                <video class="thunder_video" controls>
-                    <source src="videos/thunders_25fps.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>                
-                <p class="video_prgrph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="registration_container">
+                <h1 class="register_title">Register to contact</h1>
+                <form class="registration_form">
+                    <div>
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="John">
+                        <span class="error" id="firstNameError"></span>
+                    </div>
+                    <div>
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Doe">
+                        <span class="error" id="lastNameError"></span>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email" placeholder="emailname@domain.com">
+                        <span class="error" id="emailError"></span>
+                    </div>
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Sse123esS">
+                        <span class="error" id="passwordError"></span>
+                    </div>
+                    <div>
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Sse123esS">
+                        <span class="error" id="confirmPasswordError"></span>
+                    </div>
+                    <button type="submit" class="submit_button">Register</button>
+                </form>
+                <script>
+                    validate_form();  <!-- This script can stay here or at the end of the body -->
+                </script>
             </div>
         </div>
 
