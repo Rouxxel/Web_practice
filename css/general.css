@@ -8,16 +8,16 @@
 /*Font file access*/
 @font-face {
     font-family: 'Jacquarda Bastarda 9';  /*Name*/
-    src: url('fonts/Jacquarda_Bastarda_9/JacquardaBastarda9-Regular.ttf') 
+    src: url('../fonts/Jacquarda_Bastarda_9/JacquardaBastarda9-Regular.ttf') 
         format('truetype');
 }
 @font-face {
     font-family: 'Quantico';
-    src: url('fonts/Quantico/Quantico-Regular.ttf') format('truetype');
+    src: url('../fonts/Quantico/Quantico-Regular.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Oswald';
-    src: url('fonts/Oswald/Oswald-VariableFont_wght.ttf') format('truetype');
+    src: url('../fonts/Oswald/Oswald-VariableFont_wght.ttf') format('truetype');
 }
 
 /*-----------------------------------------------------------------------------------------------*/

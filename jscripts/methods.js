@@ -33,7 +33,7 @@ function get_current_date(){
 }
 
 /*Image and subtext update functions*/
-const img_files=["imgs/playership.png","imgs/enemyship.png","imgs/enemyship2.png"];
+const img_files=["../imgs/playership.png","../imgs/enemyship.png","../imgs/enemyship2.png"];
 const img_subtexts=["Image by: John Doe", "Image by: Jane Doe", "Image by: Jan Doe"];
 let indx=0;
 

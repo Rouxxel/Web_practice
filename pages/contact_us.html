@@ -16,30 +16,30 @@
         <meta name="copyright" content="copyright here">
 
         <!-- External files and srcs -->
-        <link rel="stylesheet" href="general.css"><!-- Shared CSS -->
-        <link rel="stylesheet" href="css/credits.css"><!-- Specific CSS -->
-        <link rel="icon" type="image/x-icon" href="imgs\logo.ico">
+        <link rel="stylesheet" href="../css/general.css"><!-- Shared CSS -->
+        <link rel="stylesheet" href="../css/contact_us.css"><!-- Specific CSS -->
+        <link rel="icon" type="image/x-icon" href="../imgs/logo.ico">
     </head>
 
     <!-- Web page itself -->
     <body>
         <!-- JavaScript file link -->
-        <script src="jscripts/methods.js"></script> 
+        <script src="../jscripts/methods.js"></script> 
 
         <!-- Header with title, logo and navigation -->
         <header class="header">
             <div class="logo_name">
-                <img src="imgs\logo.png" alt="Logo" id="logo_file">
+                <img src="../imgs/logo.png" alt="Logo" id="logo_file">
                 <h1 id="main_title">Web X</h1>
             </div>
             <div class="current_page">
-                Credits
+                Contact Us
             </div>
             <div class="nav_bar">
-                <a href="index.html">Home</a>
-                <a href="about_us.html">About us</a>
-                <a href="contact_us.html">Contact us</a>
-                <a href="#">Credits</a>
+                <a href="../index.html">Home</a>
+                <a href="../pages/about_us.html">About us</a>
+                <a href="#">Contact us</a>
+                <a href="../pages/credits.html">Credits</a>
             </div>
             <div class="date_time">
                 <div class="date_time">
@@ -69,29 +69,39 @@
 
         <!-- Whole actual body -->
         <div class="main_content">
-            <div class="warning_container">
-                <h1 class="warning_text">Warning and disclaimer!!!</h1>
-                <p class="warning_prgph">This website is purely for educational and practice purposes only in order to put into practice the capabilities of HTML5 markup language, CSS3 style sheet language and JavaScript programming language. I (Sebastian Russo) am not affiliated with any of the companies or individuals mentioned or linked on this practice website in a personal or business level.</p>
-            </div>
-
-            <div class="credits_container">
-                <h1 class="attribution_text">Attributions and Credits to:</h1>
-                <ul class="attribution_list">
-                    <li><a href="https://pixabay.com/users/artsybee-462611/" title="website logo">Logo by ArtsyBee</a></li>
-                    <li><a href="https://www.flaticon.com/free-icons/tweet" title="tweet icons">Tweet icons created by Freepik - Flaticon</a></li>
-                    <li><a href="https://www.flaticon.com/free-icons/instagram" title="instagram icons">Instagram icons created by Freepik - Flaticon</a></li>
-                    <li><a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by Freepik - Flaticon</a></li>
-                    <li><a href="https://www.flaticon.com/free-icons/reddit" title="reddit icons">Reddit icons created by Freepik - Flaticon</a></li>
-                    <li><a href="https://www.flaticon.com/free-icons/discord" title="discord icons">Discord icons created by LAFS - Flaticon</a></li>
-                    <li><a href="https://www.flaticon.com/free-icons/youtube" title="youtube icons">Youtube icons created by Swifticons - Flaticon</a></li>
-                    <li><a href="https://fonts.google.com/specimen/Oswald/about?query=oswald" title="Oswald font">Oswald font designed by Vernon Adams, Kalapi Gajjar, Cyreal</a></li>
-                    <li><a href="https://fonts.google.com/specimen/Quantico/about?query=quantico" title="Quantico font">Quantico font designed by MADType</a></li>
-                    <li><a href="https://www.pexels.com/video/thunder-and-flash-of-lightning-5908584/" title="thunder video"></a>Purple thunder video by Nathan Baldwin</li>
-                    <li><a href="https://pixabay.com/vectors/account-profile-avatar-user-6491185/>" title="pfp image"></a>Image by Khai TranQuang from Pixabay</li>
-                    <li><p>Web design by Sebastian Russo</p></li>
-                    <li><p>HTML, CSS and JS files by Sebastian Russo</p></li>
-                    <li><p>Space ship pixel art sprite sheets by Sebastian Russo</p></li>
-                </ul>
+            <div class="registration_container">
+                <h1 class="register_title">Register to contact</h1>
+                <form class="registration_form">
+                    <div>
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="John">
+                        <span class="error" id="firstNameError"></span>
+                    </div>
+                    <div>
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Doe">
+                        <span class="error" id="lastNameError"></span>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email" placeholder="emailname@domain.com">
+                        <span class="error" id="emailError"></span>
+                    </div>
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Sse123esS">
+                        <span class="error" id="passwordError"></span>
+                    </div>
+                    <div>
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Sse123esS">
+                        <span class="error" id="confirmPasswordError"></span>
+                    </div>
+                    <button type="submit" class="submit_button">Register</button>
+                </form>
+                <script>
+                    validate_form();  <!-- This script can stay here or at the end of the body -->
+                </script>
             </div>
         </div>
 
@@ -102,22 +112,22 @@
         <footer class="footer">
             <div class="socials_img_row">
                 <a href="https://www.instagram.com/instagram/">
-                    <img src="imgs\instagram.png" alt="insta" id="instagram_file">
+                    <img src="../imgs/instagram.png" alt="insta" id="instagram_file">
                 </a>
                 <a href="https://x.com/X?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
-                    <img src="imgs\twitter.png" alt="twitter" id="twitter_file">
+                    <img src="../imgs/twitter.png" alt="twitter" id="twitter_file">
                 </a>
                 <a href="https://www.youtube.com/@YouTube">
-                    <img src="imgs\youtube.png" alt="youtb" id="youtube_file">
+                    <img src="../imgs/youtube.png" alt="youtb" id="youtube_file">
                 </a>
                 <a href="https://www.linkedin.com/company/linkedin/posts/?feedView=all">
-                    <img src="imgs\linkedin.png" alt="linkd" id="linkedin_file">
+                    <img src="../imgs/linkedin.png" alt="linkd" id="linkedin_file">
                 </a>
                 <a href="https://www.reddit.com/r/reddit/">
-                    <img src="imgs\reddit.png" alt="reddit" id="reddit_file">
+                    <img src="../imgs/reddit.png" alt="reddit" id="reddit_file">
                 </a>
                 <a href="https://discord.com/servers">
-                    <img src="imgs\discord.png" alt="discord" id="discord_file">
+                    <img src="../imgs/discord.png" alt="discord" id="discord_file">
                 </a>
             </div>
             
