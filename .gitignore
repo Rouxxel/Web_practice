@@ -1,0 +1,30 @@
+# Node and dependency folders (if npm packages are ever used)
+node_modules/
+
+# macOS system files
+.DS_Store
+
+# Logs
+*.log
+
+# Docker-related
+*.tar
+*.img
+
+# VS Code settings
+.vscode/
+
+# OS or IDE backups
+*.swp
+*.bak
+*~
+
+# Ignore build artifacts
+dist/
+build/
+
+# System-level files
+Thumbs.db
+
+# Ignore Docker volumes or .env files (if sensible data is added)
+.env

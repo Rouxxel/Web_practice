@@ -1,0 +1,19 @@
+# Docker and Git config
+Dockerfile
+.dockerignore
+.gitignore
+.git/
+README.md
+
+# System or editor files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Log files (if log is added in the future)
+*.log
+
+# (dev-only folders (if added in the future)
+node_modules/
+dist/
+build/
