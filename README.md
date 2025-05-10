@@ -13,6 +13,7 @@ Web_practice/
 ├── index.html             # Main landing page
 ├── README.md              # Project documentation
 ├── Dockerfile             # Docker setup for deployment
+├── docker-compose.yml     # Docker Compose setup
 ├── .dockerignore          # Files ignored during Docker image build
 ├── .gitignore             # Git exclusions
 │
@@ -33,6 +34,7 @@ Web_practice/
 - **CSS3** – Layouts, animations, responsive design, custom fonts
 - **JavaScript (vanilla)** – DOM manipulation, interactivity
 - **Docker** – Containerized deployment using Nginx
+- **Docker Compose** – Simplified multi-container and build setup
 - **Nginx** – Lightweight web server for static content
 
 ---
@@ -41,19 +43,41 @@ Web_practice/
 
 Make sure [Docker](https://www.docker.com/products/docker-desktop) is installed and running.
 
-### 1. Build the Docker Image
+### Option 1: Using Docker Compose (Recommended)
+
+1. Build and start the container:
+
+```bash
+docker-compose up --build -d
+```
+
+2. Open your browser and go to:
+
+```
+http://localhost:8080
+```
+
+3. To stop the container:
+
+```bash
+docker-compose down
+```
+
+### Option 2: Using Docker CLI Directly
+
+1. Build the Docker image:
 
 ```bash
 docker build -t web_practice .
 ```
 
-### 2. Run the Container
+2. Run the container:
 
 ```bash
 docker run -d -p 8080:80 web_practice
 ```
 
-Then open your browser and go to:
+3. Open your browser and visit:
 
 ```
 http://localhost:8080
@@ -67,7 +91,7 @@ This project serves as a hands-on sandbox to:
 
 - Practice and experiment with front-end web technologies
 - Understand file organization for real-world projects
-- Learn basic Docker workflows for static site deployment
+- Learn basic Docker and Docker Compose workflows for static site deployment
 
 ---
 
