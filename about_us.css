@@ -1,0 +1,77 @@
+/*Container 1*/
+.our_mission{
+    background-color: rgb(234, 216, 177);/*background-color: rgb(232, 92, 13);/**/
+    padding: 20px;
+    border-radius: 10px;
+    border: 2.5px solid rgb(174, 161, 133);
+
+    margin-bottom: 20px;
+}
+
+.our_mission_title{
+    font-size: 80px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*Container 2*/
+.team_members{
+    background-color: rgb(234, 216, 177);/*background-color: rgb(232, 92, 13);/**/
+    padding: 20px;
+    border-radius: 10px;
+    border: 2.5px solid rgb(174, 161, 133);
+
+    margin-bottom: 20px;
+
+    display: grid; /* Use CSS Grid */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px; /* Spacing between the items */
+}
+
+.member{
+    background-color: rgb(174, 161, 133);/*background-color: rgb(232, 92, 13);/**/
+    padding: 20px;
+    border-radius: 10px;
+    border: 2.5px solid rgb(130, 121, 100);
+}
+
+.member img{
+    height: 80px;
+    width: auto;
+}
+
+.member h5{
+    font-size: 25px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.member h6{
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Container 3*/
+.thunder_video_prgrph {
+    background-color: rgb(234, 216, 177);/*background-color: rgb(232, 92, 13);/**/
+    padding: 20px;
+    border-radius: 10px;
+    border: 2.5px solid rgb(174, 161, 133);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.thunder_video{
+    width: 850px;
+    height: auto;
+
+    border-radius: 10px;
+    border: 2.5px solid rgb(174, 161, 133);
+
+    margin-bottom: 20px;
+    margin-top: 20px;
+}

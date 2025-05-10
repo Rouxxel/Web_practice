@@ -1,0 +1,58 @@
+/*Warning container*/
+.warning_container{
+    background-color: rgb(234, 216, 177);/*background-color: rgb(232, 92, 13);/**/
+    padding: 20px;
+    border-radius: 10px;
+    border: 2.5px solid rgb(174, 161, 133);
+
+    margin-bottom: 20px;
+}
+
+.warning_text{
+    font-size: 80px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*credits container*/
+.credits_container{
+    background-color: rgb(234, 216, 177);/*background-color: rgb(232, 92, 13);/**/
+    padding: 20px;
+    border-radius: 10px;
+    border: 2.5px solid rgb(174, 161, 133);
+}
+
+.attribution_text{
+    font-size: 70px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*List item styling*/
+.attribution_list {
+    list-style-type:lower-greek; /* Removes default bullet points */
+    padding: 20px; /* Remove padding */
+    padding-left: 40px;
+}
+
+.attribution_list li {
+    margin-bottom: 15px; /* Adds spacing between list items */
+    font-size: 25px; /* You can adjust this based on your design */
+}
+
+.attribution_list p {
+    color: #000; /* Text color */
+}
+
+/* Styling for links and paragraphs within list items */
+.attribution_list a {
+    color: #333; /* Text color */
+    text-decoration: none; /* Remove underlines from links */
+}
+
+/* Optional: Add a hover effect for the links */
+.attribution_list a:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #000; /* Darken color on hover */
+}
+
