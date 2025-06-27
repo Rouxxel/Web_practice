@@ -91,6 +91,19 @@
     align-items: center;           /* Centers image and caption */
     justify-content: center; /* Center image and caption */
     text-align: center; /* Ensure text is centered */
+    width: 100%; /* Full container width */
+}
+
+.img_author .img_fig {
+    max-width: 100%;
+    width: 100%;
+    margin: 0rem;
+}
+
+.img_author img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 #ship_sprite {
