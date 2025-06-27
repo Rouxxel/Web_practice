@@ -1,13 +1,13 @@
 /*Main container*/
 .main_container{
     background-color: rgb(234, 216, 177);/*background-color: rgb(232, 92, 13);/**/
-    padding: 20px;
-    border-radius: 10px;
-    border: 2.5px solid rgb(174, 161, 133);
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    border: 0.15rem solid rgb(174, 161, 133);
 }
 
 .main_title{
-    font-size: 80px;
+    font-size: 3.5rem;
     font-weight: bold;
     font-style: normal;
 }
@@ -16,12 +16,12 @@
     display: flex;
     flex-direction: row;
 
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: normal;
     font-style: normal;
-    margin: 0px 0px 0px 0px;
+    margin: 0rem 0rem 0rem 0rem;
     position: relative;
-    top: -20px; /* Move the subtext closer by reducing the space */
+    top: -1rem; /* Move the subtext closer by reducing the space */
 }
 
 .article_side{
@@ -31,7 +31,7 @@
     align-items: center;
     justify-content: center;
 
-    gap: 15px;
+    gap: 1rem;
 }
 
 .main_paragraph {
@@ -41,40 +41,37 @@
 .side_paragraph {
     flex-grow: 1; /* This item will take up less space */
 
-    font-size: 17px;
+    font-size: 1rem;
 
-    padding: 10px;
+    padding: 0.625rem;
 
     background-color: rgb(174, 161, 133);
-    border-radius: 10px;
-    border: 2.5px solid rgb(133, 123, 102);
+    border-radius: 0.625rem;
+    border: 0.16rem solid rgb(133, 123, 102);
 
 }
 
 /*Second container*/
 .second_container{
     background-color: rgb(234, 216, 177);/*background-color: rgb(232, 92, 13);/**/
-    padding: 20px;
-    border-radius: 10px;
-    border: 2.5px solid rgb(174, 161, 133);
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    border: 0.15rem solid rgb(174, 161, 133);
 
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 .second_main_title{
-    font-size: 80px;
+    font-size: 3.5rem;
     font-weight: bold;
     font-style: normal;
 }
 
 .second_article{
-
     display: flex;                /* Enables flexbox layout */
     flex-direction: column;        /* Stacks items vertically */
     align-items: center;           /* Centers items horizontally */
     text-align: left;            /* Ensures text is centered */
-
-
 }
 
 .buttons_image {
@@ -82,10 +79,10 @@
     flex-direction: column;           /* Align items in a row (horizontally) */
     align-items: center;           /* Center items vertically */
     justify-content: center;       /* Center items horizontally */
-    gap: 10px;                     /* Adds space between buttons and image */
+    gap: 0.625rem;                     /* Adds space between buttons and image */
     text-align: center;            /* Ensure text is centered */
 
-    padding: 20px; 
+    padding: 1.25rem; 
 }
 
 .img_author {
@@ -97,23 +94,23 @@
 }
 
 #ship_sprite {
-    height: 450px;                 /* Adjust image height */
+    height: 28.125rem;                 /* Adjust image height */
     width: auto;                   /* Preserve aspect ratio */
 }
 
 .image_caption {
-    font-size: 16px;               /* Smaller text for caption */
+    font-size: 1rem;               /* Smaller text for caption */
     color: rgb(77, 77, 77);
 }
 
 .l_arrow_button, .r_arrow_button {
     background-color: rgb(58, 109, 140);     /* Styling the buttons */
     color: white;
-    padding: 10px;
-    border: 2px solid rgb(0, 31, 63);
-    border-radius: 5px;
+    padding: 0.625rem;
+    border: 0.125rem solid rgb(0, 31, 63);
+    border-radius: 0.3125rem;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .l_arrow_button:hover, .r_arrow_button:hover {

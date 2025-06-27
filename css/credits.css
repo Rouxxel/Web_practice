@@ -1,15 +1,15 @@
 /*Warning container*/
 .warning_container{
     background-color: rgb(234, 216, 177);/*background-color: rgb(232, 92, 13);/**/
-    padding: 20px;
-    border-radius: 10px;
-    border: 2.5px solid rgb(174, 161, 133);
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    border: 0.156rem solid rgb(174, 161, 133);
 
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .warning_text{
-    font-size: 80px;
+    font-size: 4rem;
     font-weight: bold;
     font-style: normal;
 }
@@ -17,13 +17,13 @@
 /*credits container*/
 .credits_container{
     background-color: rgb(234, 216, 177);/*background-color: rgb(232, 92, 13);/**/
-    padding: 20px;
-    border-radius: 10px;
-    border: 2.5px solid rgb(174, 161, 133);
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    border: 0.156rem solid rgb(174, 161, 133);
 }
 
 .attribution_text{
-    font-size: 70px;
+    font-size: 3.8rem;
     font-weight: bold;
     font-style: normal;
 }
@@ -31,13 +31,13 @@
 /*List item styling*/
 .attribution_list {
     list-style-type:lower-greek; /* Removes default bullet points */
-    padding: 20px; /* Remove padding */
-    padding-left: 40px;
+    padding: 1.25rem; /* Remove padding */
+    padding-left: 2.5rem;
 }
 
 .attribution_list li {
-    margin-bottom: 15px; /* Adds spacing between list items */
-    font-size: 25px; /* You can adjust this based on your design */
+    margin-bottom: 0.9375rem; /* Adds spacing between list items */
+    font-size: 1.5rem; 
 }
 
 .attribution_list p {
@@ -55,4 +55,3 @@
     text-decoration: underline; /* Add underline on hover */
     color: #000; /* Darken color on hover */
 }
-

@@ -1,7 +1,7 @@
 /*Reset CSS styling*/
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0rem;
+    padding: 0rem;
     box-sizing: border-box;
 }
 
@@ -22,12 +22,12 @@
 
 /*-----------------------------------------------------------------------------------------------*/
 html, body {
-    margin: 0;
-    padding: 0;
+    margin: 0rem;
+    padding: 0rem;
     font-family: 'Quantico', sans-serif;
     font-weight: normal;
     font-style: normal;
-    font-size: 20px;
+    font-size: 1.1rem;
     position: relative;
 }
 
@@ -37,7 +37,7 @@ html, body {
     background: linear-gradient(to bottom right, 
         rgb(0, 31, 63), rgb(58, 109, 140), 
         rgb(106, 154, 176)); /* Gradient from top left to bottom right */
-    padding: 10px;
+    padding: 0.625rem;
     text-align: center;
     display: flex; /*make containers to be in a row*/
     flex-direction: row;          /*Flex is in a row*/
@@ -49,8 +49,8 @@ html, body {
 /*Logo name container and inners*/
 .logo_name{
     /*background-color: rgb(255, 255, 255);*/
-    gap: 10px;
-    padding: 1px;
+    gap: 0.625rem;
+    padding: 0.0625rem;
 
     display: flex;                /*Enables flexbox*/
     flex-direction: row;          /*Flex is in a row*/
@@ -60,22 +60,22 @@ html, body {
 }
 
 .logo_name img {
-    height: 45px;
+    height: 2.8rem;
     width: auto;
 }
 
 #main_title{
     font-family: 'Jacquarda Bastarda 9', sans-serif;
-    font-size: 42px;
+    font-size: 2.625rem;
 }
 
 .current_page{
     /*background-color: aliceblue;/**/
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: bold;
     font-style: normal;
     
-    padding: 4px;
+    padding: 0.25rem;
 }
 
 /*Navigation bar and items*/
@@ -85,19 +85,19 @@ html, body {
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;     /*Horizontally center the contents*/
     align-items: center;                /*Vertically center the contents*/
-    /*padding: 10px 10px 5px 10px; /* Padding: top 10px, right 10px, bottom 0px, left 10px */
-    gap: 0px;
+    /*padding: 0.625rem 0.625rem 0.31rem 0.625rem; /* Padding: top 0.625rem, right 0.625rem, bottom 0rem, left 0.625rem */
+    gap: 0rem;
     position: absolute;
-    bottom: 0px;
-    right: 10px;
+    bottom: 0rem;
+    right: 0.625rem;
 }
 
 /* Styling the individual links */
 .nav_bar a {
     background-color: rgb(234, 216, 177, 0.65); /* Semi-transparent background color */
-    border-top: 2px solid black;
-    border-right: 2px solid black;
-    border-left: 2px solid black;
+    border-top: 0.125rem solid black;
+    border-right: 0.125rem solid black;
+    border-left: 0.125rem solid black;
     border-bottom: none;
     
     text-align: center;                      /* Center text inside links */
@@ -105,9 +105,9 @@ html, body {
     justify-content: center;                 /* Horizontally center the items */
 
     color: black;                                 /* Text color for the links */
-    padding: 3px;                                   /* Internal padding for links */
+    padding: 0.18rem;                                   /* Internal padding for links */
     text-decoration: none;                          /* Remove underline from links */
-    font-size: 15px;
+    font-size: 0.9rem;
 }
 
 /* Add hover effect */
@@ -120,10 +120,10 @@ html, body {
     display: flex;
     flex-direction: row; 
 
-    font-size: 20px;
+    font-size: 1.1rem;
 
-    gap: 5px;
-    padding: 1px;
+    gap: 0.31rem;
+    padding: 0.0625rem;
 }
 
 /*-----------------------------------------------------------------------------------------------*/
@@ -132,14 +132,14 @@ html, body {
     background: linear-gradient(to bottom right, 
         rgb(0, 31, 63), rgb(58, 109, 140), 
         rgb(106, 154, 176)); /* Gradient from top left to bottom right */
-    padding: 10px;
+    padding: 0.625rem;
 
     display: flex;                
     flex-direction: column;             /* items organized in a column */
     justify-content: center;            /* Vertically center the items */
     align-items: center;                /* Horizontally center the items */
     text-align: center;                 /* Ensure text is centered*/
-    gap: 15px;
+    gap: 0.9rem;
 }
 
 /*Social media logos row*/
@@ -147,13 +147,13 @@ html, body {
     /*background-color: aliceblue;/**/
     display: flex;
     flex-direction: row;
-    padding: 0px 10px 0px 10px;
+    padding: 0rem 0.625rem 0rem 0.625rem;
 
-    gap: 30px;
+    gap: 1.875rem;
 }
 
 .socials_img_row img{
-    height: 40px;
+    height: 2.5rem;
     width: auto;
 }
 
@@ -162,9 +162,9 @@ html, body {
     /*background-color: aliceblue; /**/
     display: flex;
     flex-direction: row;
-    padding: 0px 10px 0px 10px;
+    padding: 0rem 0.625rem 0rem 0.625rem;
 
-    gap: 5px;
+    gap: 0.31rem;
 }
 
 .worldwide_locations a, .worldwide_locations h4{
@@ -176,9 +176,9 @@ html, body {
 
     color: black; 
     /*color: rgb(250, 188, 63);                     /* Text color for the links */
-    padding: 3px;                                   /* Internal padding for links */
+    padding: 0.1875rem;                                   /* Internal padding for links */
     text-decoration: underline;                          /* Remove underline from links */
-    font-size: 20px;
+    font-size: 1.1rem;
 }
 
 /*Rights reserved text*/
@@ -188,8 +188,8 @@ html, body {
 
     color: black; 
     /*color: rgb(250, 188, 63);                     /* Text color for the links */
-    padding: 3px;                                   /* Internal padding for links */
-    font-size: 20px;
+    padding: 0.1875rem;                                   /* Internal padding for links */
+    font-size: 1.1rem;
 }
 
 /*Terms and conditions row*/
@@ -197,9 +197,9 @@ html, body {
     /*background-color: aliceblue; /**/
     display: flex;
     flex-direction: row;
-    padding: 0px 10px 0px 10px;
+    padding: 0rem 0.625rem 0rem 0.625rem;
 
-    gap: 5px;
+    gap: 0.31rem;
 }
 
 .policies_row a, .policies_row h4{
@@ -211,9 +211,9 @@ html, body {
 
     color: black; 
     /*color: rgb(250, 188, 63);                     /* Text color for the links */
-    padding: 3px;                                   /* Internal padding for links */
+    padding: 0.1875rem;                                   /* Internal padding for links */
     text-decoration: underline;                          /* Remove underline from links */
-    font-size: 20px;
+    font-size: 1.1rem;
 }
 
 /*-----------------------------------------------------------------------------------------------*/
@@ -222,7 +222,7 @@ html, body {
     background: linear-gradient(to bottom left, 
     rgb(106, 154, 176), rgb(58, 109, 140),
     rgb(0, 31, 63)); /* Gradient from top left to bottom right */
-    padding: 20px 80px 20px 80px; 
+    padding: 1.1rem 5rem 1.1rem 5rem; 
 }
 
 
