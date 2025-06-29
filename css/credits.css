@@ -14,6 +14,12 @@
     font-style: normal;
 }
 
+.warning_prgph{
+    font-size: 1.1rem;
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*credits container*/
 .credits_container{
     background-color: rgb(234, 216, 177);/*background-color: rgb(232, 92, 13);/**/
@@ -32,11 +38,11 @@
 .attribution_list {
     list-style-type:lower-greek; /* Removes default bullet points */
     padding: 1.25rem; /* Remove padding */
-    padding-left: 2.5rem;
+    padding-left: 1.7rem;
 }
 
 .attribution_list li {
-    margin-bottom: 0.9375rem; /* Adds spacing between list items */
+    margin-bottom: 0.7rem; /* Adds spacing between list items */
     font-size: 1.2rem; 
 }
 
@@ -54,4 +60,65 @@
 .attribution_list a:hover {
     text-decoration: underline; /* Add underline on hover */
     color: #000; /* Darken color on hover */
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+@media (max-width: 768px){
+    .warning_text, .attribution_text{
+        font-size: 2.7rem;
+    }
+
+    .second_main_paragraph_2 {
+        font-size: 0.9rem;
+    }
+
+    .warning_prgph{
+        font-size: 1rem;
+    }
+
+    .attribution_list li {
+        font-size: 1rem; 
+    }
+}
+
+@media (max-width: 600px){
+    .warning_text, .attribution_text{
+        font-size: 2.5rem;
+    }
+
+    .warning_prgph{
+        font-size: 0.8rem;
+    }
+
+    .attribution_list li {
+        font-size: 0.9rem; 
+    }
+}
+
+@media (max-width: 480px){
+    .warning_text, .attribution_text{
+        font-size: 2.3rem;
+    }
+
+    .warning_prgph{
+        font-size: 0.6rem;
+    }
+
+    .attribution_list li {
+        font-size: 0.8rem; 
+    }
+}
+
+@media (max-width: 360px){
+    .warning_text, .attribution_text{
+        font-size: 2rem;
+    }
+
+    .warning_prgph{
+        font-size: 0.5rem;
+    }
+
+    .attribution_list li {
+        font-size: 0.7rem; 
+    }
 }
