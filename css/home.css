@@ -35,13 +35,14 @@
 }
 
 .main_paragraph {
+    font-size: 1rem;
     flex-grow: 2; /* This item will take up more space */
 }
 
 .side_paragraph {
     flex-grow: 1; /* This item will take up less space */
 
-    font-size: 1rem;
+    font-size: 0.9rem;
 
     padding: 0.625rem;
 
@@ -107,7 +108,7 @@
 }
 
 #ship_sprite {
-    height: 28.125rem;                 /* Adjust image height */
+    height: auto;                 /* Adjust image height */
     width: auto;                   /* Preserve aspect ratio */
 }
 
@@ -128,4 +129,87 @@
 
 .l_arrow_button:hover, .r_arrow_button:hover {
     background-color: rgb(106, 154, 176);     /* Change color on hover */
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+@media (max-width: 768px){
+    .main_paragraph {
+        font-size: 0.9rem;
+    }
+
+    .side_paragraph {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 600px){
+    .main_title, .second_main_title {
+        font-size: 3rem;
+    }
+
+    .subtext_main_title, .image_caption {
+        font-size: 0.9rem;
+    }
+
+    .main_paragraph, .second_main_paragraph_1,
+    .second_main_paragraph_2 {
+        font-size: 0.8rem;
+    }
+
+    .side_paragraph {
+        font-size: 0.7rem;
+    }
+
+    .l_arrow_button, .r_arrow_button {
+        padding: 0.55rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px){
+    .main_title, .second_main_title {
+        font-size: 2.7rem;
+    }
+
+    .subtext_main_title, .image_caption {
+        font-size: 0.7rem;
+    }
+
+    .main_paragraph, .second_main_paragraph_1,
+    .second_main_paragraph_2 {
+        font-size: 0.6rem;
+    }
+
+    .side_paragraph {
+        font-size: 0.5rem;
+    }
+
+    .l_arrow_button, .r_arrow_button {
+        padding: 0.4rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 360px){
+    .main_title, .second_main_title {
+        font-size: 2.6rem;
+    }
+
+    .subtext_main_title, .image_caption {
+        font-size: 0.6rem;
+    }
+
+    .main_paragraph, .second_main_paragraph_1,
+    .second_main_paragraph_2 {
+        font-size: 0.5rem;
+    }
+
+    .side_paragraph {
+        font-size: 0.4rem;
+    }
+
+    .l_arrow_button, .r_arrow_button {
+        padding: 0.35rem;
+        font-size: 0.8rem;
+    }
 }
