@@ -102,6 +102,8 @@
 }
 
 .img_author img {
+    max-width: 22rem;
+    max-height: 22rem;
     max-width: 100%;
     height: auto;
     display: block;
@@ -141,6 +143,11 @@
     .side_paragraph {
         font-size: 0.8rem;
     }
+
+    .img_author img {
+        max-width: 20rem;
+        max-height: 20rem;
+    }
 }
 
 @media (max-width: 600px){
@@ -164,6 +171,11 @@
     .l_arrow_button, .r_arrow_button {
         padding: 0.55rem;
         font-size: 1.1rem;
+    }
+
+    .img_author img {
+        max-width: 18rem;
+        max-height: 18rem;
     }
 }
 
@@ -189,6 +201,11 @@
         padding: 0.4rem;
         font-size: 0.9rem;
     }
+
+    .img_author img {
+        max-width: 16rem;
+        max-height: 16rem;
+    }
 }
 
 @media (max-width: 360px){
@@ -212,5 +229,10 @@
     .l_arrow_button, .r_arrow_button {
         padding: 0.35rem;
         font-size: 0.8rem;
+    }
+
+    .img_author img {
+        max-width: 14rem;
+        max-height: 14rem;
     }
 }
