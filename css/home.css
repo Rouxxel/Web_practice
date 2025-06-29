@@ -133,7 +133,8 @@
 
 /* ---------- MEDIA QUERIES ---------- */
 @media (max-width: 768px){
-    .main_paragraph {
+    .main_paragraph, .second_main_paragraph_1,
+    .second_main_paragraph_2 {
         font-size: 0.9rem;
     }
 
