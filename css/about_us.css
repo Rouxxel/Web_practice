@@ -76,3 +76,84 @@
     margin-bottom: 1.25rem;
     margin-top: 1.25rem;
 }
+
+/* ---------- MEDIA QUERIES ---------- */
+@media (max-width: 768px){
+    .our_mission_prgph, .thunder_video_prgrph {
+        font-size: 0.9rem;
+    }
+
+    .member h5{
+        font-size: 1.3rem;
+    }
+
+    .member h6{
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 600px){
+    .our_mission_title {
+        font-size: 3rem;
+    }
+
+    .our_mission_prgph, .thunder_video_prgrph {
+        font-size: 0.8rem;
+    }
+
+    .member img{
+        height: 4rem;
+    }
+
+    .member h5{
+        font-size: 1.08rem;
+    }
+
+    .member h6{
+        font-size: 0.68rem;
+    }
+}
+
+@media (max-width: 480px){
+    .our_mission_title, .second_our_mission_title {
+        font-size: 2.7rem;
+    }
+
+    .our_mission_prgph, .thunder_video_prgrph {
+        font-size: 0.6rem;
+    }
+
+    .member img{
+        height: 2rem;
+    }
+
+    .member h5{
+        font-size: 0.7rem;
+    }
+
+    .member h6{
+        font-size: 0.4rem;
+    }
+}
+
+@media (max-width: 360px){
+    .our_mission_title, .second_our_mission_title {
+        font-size: 2.5rem;
+    }
+
+    .our_mission_prgph, .thunder_video_prgrph {
+        font-size: 0.5rem;
+    }
+
+    member img{
+        height: 0.5rem;
+    }
+
+    .member h5{
+        font-size: 0.56rem;
+    }
+
+    .member h6{
+        font-size: 0.3rem;
+    }
+}
