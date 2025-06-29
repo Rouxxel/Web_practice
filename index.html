@@ -28,38 +28,40 @@
 
         <!-- Header with title, logo and navigation -->
         <header class="header">
-            <div class="logo_name">
-                <img src="../imgs/logo.png" alt="Logo" id="logo_file">
-                <h1 id="main_title">Web X</h1>
-            </div>
-            <div class="current_page">
-                Home
-            </div>
-            <div class="nav_bar">
-                <a href="#">Home</a>
-                <a href="../pages/about_us.html">About us</a>
-                <a href="../pages/contact_us.html">Contact us</a>
-                <a href="../pages/credits.html">Credits</a>
-            </div>
-            <div class="date_time">
-                <div class="date_time">
-                    <div class="time" id="times_display">
-                        HH:MM 24H <!-- This will be updated by JavaScript -->
-                    </div>
-                    <div>
-                        |
-                    </div>
-                    <div class="date" id="date_display">
-                        DD/MM/YY <!-- You can also update this if you want -->
-                    </div>
+            <div class="left_group">
+                <div class="logo_name">
+                    <img src="../imgs/logo.png" alt="Logo" id="logo_file">
+                    <h1 class="website_main_title">Web X</h1>
+                </div>
+                <div class="current_page">
+                    Home
                 </div>
             </div>
+
+            <div class="right_group">
+                <div class="date_time">
+                    <div class="time" id="times_display">
+                        HH:MM 24H
+                    </div>
+                    <div class="date" id="date_display">
+                        DD/MM/YY
+                    </div>
+                </div>
+
+                <div class="nav_bar">
+                    <a href="#">Home</a>
+                    <a href="../pages/about_us.html">About us</a>
+                    <a href="../pages/contact_us.html">Contact us</a>
+                    <a href="../pages/credits.html">Credits</a>
+                </div>
+            </div>
+
             <!-- Call functions to update date and time -->
             <script>
                 get_current_time();
                 get_current_date();
 
-                setInterval(get_current_time, 10000); // Updates every 10 seconds (60000 milliseconds)
+                setInterval(get_current_time, 10000); // Updates every 10 seconds
                 setInterval(get_current_date, 60000);
             </script>
         </header>
