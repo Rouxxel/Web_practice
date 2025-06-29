@@ -93,7 +93,7 @@
 }
 
 @media (max-width: 600px){
-    .our_mission_title {
+    .our_mission_title, .second_our_mission_title {
         font-size: 3rem;
     }
 
