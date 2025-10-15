@@ -100,9 +100,3 @@ This project serves as a hands-on sandbox to:
 - This is a self-contained static site — no backend.
 - Deployment is handled via a lightweight Nginx Docker container.
 - Future enhancements may include SCSS, JS modules, or integration with a CI/CD pipeline.
-
----
-
-## 📄 License
-
-This project is for educational and personal practice use. No license is currently attached.
