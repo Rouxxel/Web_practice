@@ -1,19 +1,28 @@
-# Docker and Git config
-Dockerfile
-.dockerignore
-.gitignore
-.git/
-README.md
+# Exclude old directory structure
+css/
+imgs/
+jscripts/
+pages/
+fonts/
+audio_srcs/
+videos/
+index.html
 
-# System or editor files
+# Development files
+.git/
+.gitignore
+README.md
+*.md
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
 .DS_Store
 Thumbs.db
-.vscode/
 
-# Log files (if log is added in the future)
+# Logs
 *.log
-
-# (dev-only folders (if added in the future)
-node_modules/
-dist/
-build/

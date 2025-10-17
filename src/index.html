@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <!-- Hidden head -->
+    <head>
+        <title>Website X</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Sebastian Russo">
+        <meta charset="UTF-8">
+        <meta name="description" content="This is a practice responsive web page", keyword="page">
+        <meta name="keywords" content="Practice, Web, Web page, HTML, HTML5, CSS, CSS3, Javascript, JS,">
+
+        <!-- Property Tags -->
+        <meta property="og:title" content="Website X">
+        <meta property="og:description" content="Practice web page">
+        <meta name="copyright" content="copyright here">
+
+        <!-- External files and srcs -->
+        <link rel="stylesheet" href="assets/css/general.css"><!-- Shared CSS -->
+        <link rel="stylesheet" href="assets/css/home.css"><!-- Specific CSS -->
+        <link rel="icon" type="image/x-icon" href="assets/images/logo.ico">
+    </head>
+
+    <!-- Web page itself -->
+    <body>
+        <!-- JavaScript file link -->
+        <script src="assets/js/methods.js"></script> 
+
+        <!-- Header with title, logo and navigation -->
+        <header class="header">
+            <div class="left_group">
+                <div class="logo_name">
+                    <img src="assets/images/logo.png" alt="Logo" id="logo_file">
+                    <h1 class="website_main_title">Web X</h1>
+                </div>
+                <div class="current_page">
+                    Home
+                </div>
+            </div>
+
+            <div class="right_group">
+                <div class="date_time">
+                    <div class="time" id="times_display">
+                        HH:MM 24H
+                    </div>
+                    <div class="date" id="date_display">
+                        DD/MM/YY
+                    </div>
+                </div>
+
+                <div class="nav_bar">
+                    <a href="#">Home</a>
+                    <a href="pages/about-us.html">About us</a>
+                    <a href="pages/contact-us.html">Contact us</a>
+                    <a href="pages/credits.html">Credits</a>
+                </div>
+            </div>
+
+            <!-- Call functions to update date and time -->
+            <script>
+                get_current_time();
+                get_current_date();
+
+                setInterval(get_current_time, 10000); // Updates every 10 seconds
+                setInterval(get_current_date, 60000);
+            </script>
+        </header>
+
+        <!-- Header-body separation line -->
+        <hr style="border: 0.09rem solid black; width: 100%;">
+
+        <!-- Whole actual body -->
+        <div class="main_content">
+            <div class="main_container">
+                <h1 class="main_title">
+                    Main title
+                </h1>
+                <h2 class="subtext_main_title">
+                    <div class="Author name">
+                        Author name
+                    </div>
+                    <div class="date">
+                        , DD/MM/YY
+                    </div>
+                </h2>
+
+                <div class="article_side">
+                    <article class="main_paragraph">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?.
+                    </article>
+                    <aside class="side_paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </aside>
+                </div>
+            </div>
+
+            <div class="second_container">
+                <h1 class="second_main_title">
+                    Second title
+                </h1>
+                </h2>
+
+                <div class="second_article">
+                    <article class="second_main_paragraph_1">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?.
+                    </article>
+
+                    <div class="buttons_image">
+                        <div class="img_author">
+                            <figure class="img_fig">
+                                <img src="assets/images/playership.png" alt="sprite here" id="ship_sprite">
+                                <figcaption class="image_caption" id="image_caption">
+                                    Image by: John Doe
+                                </figcaption>
+                            </figure>
+                        </div>
+                        
+                        <div class="buttons">
+                            <button class="l_arrow_button" onclick="update_image('left')">&larr;</button> <!-- Right Arrow -->
+                            <button class="r_arrow_button" onclick="update_image('right')">&rarr;</button> <!-- Right Arrow -->
+                        </div>
+                    </div>
+
+                    <article class="second_main_paragraph_2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header-body separation line -->
+        <hr style="border: 0.09rem solid black; width: 100%;">
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="socials_img_row">
+                <a href="https://www.instagram.com/instagram/">
+                    <img src="assets/images/instagram.png" alt="insta" id="instagram_file">
+                </a>
+                <a href="https://x.com/X?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                    <img src="assets/images/twitter.png" alt="twitter" id="twitter_file">
+                </a>
+                <a href="https://www.youtube.com/@YouTube">
+                    <img src="assets/images/youtube.png" alt="youtb" id="youtube_file">
+                </a>
+                <a href="https://www.linkedin.com/company/linkedin/posts/?feedView=all">
+                    <img src="assets/images/linkedin.png" alt="linkd" id="linkedin_file">
+                </a>
+                <a href="https://www.reddit.com/r/reddit/">
+                    <img src="assets/images/reddit.png" alt="reddit" id="reddit_file">
+                </a>
+                <a href="https://discord.com/servers">
+                    <img src="assets/images/discord.png" alt="discord" id="discord_file">
+                </a>
+            </div>
+            
+            <div class="worldwide_locations">
+                <a href="https://en.wikipedia.org/wiki/Europe">Europe</a>
+                <h4>|</h4>
+                <a href="https://en.wikipedia.org/wiki/North_America">North America</a>
+                <h4>|</h4>
+                <a href="https://en.wikipedia.org/wiki/Americas">The Americas</a>
+                <h4>|</h4>
+                <a href="https://en.wikipedia.org/wiki/Asia">Asia</a>
+                <h4>|</h4>
+                <a href="https://en.wikipedia.org/wiki/Africa">Africa</a>
+                <h4>|</h4>
+                <a href="https://en.wikipedia.org/wiki/Oceania">Oceania</a>
+            </div>
+
+            <h4 class="rights_text">2024 Web X, Inc. Released under the MIT License.</h4>
+
+            <div class="policies_row">
+                <a href="https://en.wikipedia.org/wiki/Policy">Terms of Use</a>
+                <h4>|</h4>
+                <a href="https://en.wikipedia.org/wiki/Privacy_policy">Privacy Policy</a>
+                <h4>|</h4>
+                <a href="https://en.wikipedia.org/wiki/HTTP_cookie">Cookie Policy</a>
+            </div>
+        </footer>
+    </body>
+</html>

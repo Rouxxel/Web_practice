@@ -10,20 +10,24 @@ This static website demonstrates a wide range of front-end concepts, including c
 
 ```
 Web_practice/
-├── index.html             # Main landing page
+├── src/                   # Source files (production-ready)
+│   ├── index.html         # Main landing page
+│   ├── pages/             # Additional HTML pages
+│   │   ├── about-us.html
+│   │   ├── contact-us.html
+│   │   └── credits.html
+│   └── assets/            # Static assets
+│       ├── css/           # CSS stylesheets
+│       ├── js/            # JavaScript files
+│       ├── images/        # Images and icons
+│       ├── fonts/         # Custom font files
+│       ├── audio/         # Audio files
+│       └── videos/        # Video content
 ├── README.md              # Project documentation
 ├── Dockerfile             # Docker setup for deployment
 ├── docker-compose.yml     # Docker Compose setup
 ├── .dockerignore          # Files ignored during Docker image build
-├── .gitignore             # Git exclusions
-│
-├── audio_srcs/            # Audio files used in the site
-├── css/                   # CSS stylesheets
-├── fonts/                 # Custom font files
-├── imgs/                  # Images and icons
-├── jscripts/              # JavaScript files
-├── pages/                 # Additional HTML pages
-└── videos/                # Embedded video content
+└── .gitignore             # Git exclusions
 ```
 
 ---
