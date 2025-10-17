@@ -4,28 +4,28 @@ const team_members = [
         position: "CEO",
         phone: "+49 123 12345678",
         email: "dummyemail@xmail.com",
-        img: "assets/images/pfp.png"
+        img: "../assets/images/pfp.png"
     },
     {
         name: "Jane Doe",
         position: "CTO",
         phone: "+49 123 12345678",
         email: "dummyemail@xmail.com",
-        img: "assets/images/pfp.png"
+        img: "../assets/images/pfp.png"
     },
     {
         name: "Janet Doe",
         position: "Marketing Manager",
         phone: "+49 123 12345678",
         email: "dummyemail@xmail.com",
-        img: "assets/images/pfp.png"
+        img: "../assets/images/pfp.png"
     },
     {
         name: "Johnathan Doe",
         position: "HR Manager",
         phone: "+49 123 12345678",
         email: "dummyemail@xmail.com",
-        img: "assets/images/pfp.png"
+        img: "../assets/images/pfp.png"
     }
 ];
 

@@ -1,37 +1,74 @@
-/*Warning container*/
-.warning_container{
-    background-color: rgb(234, 216, 177);/*background-color: rgb(232, 92, 13);/**/
-    padding: 1.25rem;
-    border-radius: 0.625rem;
-    border: 0.156rem solid rgb(174, 161, 133);
-
-    margin-bottom: 1.25rem;
+/* Warning Container */
+.warning_container {
+    background: var(--neutral-50);
+    padding: var(--space-8);
+    border-radius: var(--radius-2xl);
+    border: 1px solid var(--neutral-200);
+    box-shadow: var(--shadow-xl);
+    margin-bottom: var(--space-8);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
 }
 
-.warning_text{
-    font-size: 4rem;
-    font-weight: bold;
-    font-style: normal;
+.warning_container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
 }
 
-.warning_prgph{
-    font-size: 1.1rem;
-    font-weight: normal;
-    font-style: normal;
+.warning_text {
+    font-size: var(--text-5xl);
+    font-weight: 700;
+    color: var(--neutral-900);
+    margin-bottom: var(--space-6);
+    background: linear-gradient(135deg, var(--primary-800), var(--primary-600));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-/*credits container*/
-.credits_container{
-    background-color: rgb(234, 216, 177);/*background-color: rgb(232, 92, 13);/**/
-    padding: 1.25rem;
-    border-radius: 0.625rem;
-    border: 0.156rem solid rgb(174, 161, 133);
+.warning_prgph {
+    color: var(--neutral-700);
+    font-size: var(--text-base);
+    line-height: 1.7;
 }
 
-.attribution_text{
-    font-size: 3.8rem;
-    font-weight: bold;
-    font-style: normal;
+/* Credits Container */
+.credits_container {
+    background: var(--neutral-50);
+    padding: var(--space-8);
+    border-radius: var(--radius-2xl);
+    border: 1px solid var(--neutral-200);
+    box-shadow: var(--shadow-xl);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.credits_container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+}
+
+.attribution_text {
+    font-size: var(--text-5xl);
+    font-weight: 700;
+    color: var(--neutral-900);
+    margin-bottom: var(--space-6);
+    background: linear-gradient(135deg, var(--primary-800), var(--primary-600));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 /*List item styling*/
@@ -42,24 +79,27 @@
 }
 
 .attribution_list li {
-    margin-bottom: 0.7rem; /* Adds spacing between list items */
-    font-size: 1.2rem; 
+    margin-bottom: var(--space-3);
+    font-size: var(--text-lg);
+    color: var(--neutral-700);
 }
 
 .attribution_list p {
-    color: #000; /* Text color */
+    color: var(--neutral-700);
+    margin: 0;
+    display: inline;
 }
 
-/* Styling for links and paragraphs within list items */
+/* Styling for links within list items */
 .attribution_list a {
-    color: #333; /* Text color */
-    text-decoration: none; /* Remove underlines from links */
+    color: var(--neutral-700);
+    text-decoration: none;
 }
 
-/* Optional: Add a hover effect for the links */
+/* Hover effect for links */
 .attribution_list a:hover {
-    text-decoration: underline; /* Add underline on hover */
-    color: #000; /* Darken color on hover */
+    text-decoration: underline;
+    color: var(--neutral-900);
 }
 
 /* ---------- MEDIA QUERIES ---------- */

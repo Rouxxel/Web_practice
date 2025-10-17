@@ -1,38 +1,81 @@
-/*Container 1*/
-.our_mission{
-    background-color: rgb(234, 216, 177);/*background-color: rgb(232, 92, 13);/**/
-    padding: 1.25rem;
-    border-radius: 0.625rem;
-    border: 0.156rem solid rgb(174, 161, 133);
-
-    margin-bottom: 1.25rem;
+/* Our Mission Container */
+.our_mission {
+    background: var(--neutral-50);
+    padding: var(--space-8);
+    border-radius: var(--radius-2xl);
+    border: 1px solid var(--neutral-200);
+    box-shadow: var(--shadow-xl);
+    margin-bottom: var(--space-8);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
 }
 
-.our_mission_title{
-    font-size: 4rem;
-    font-weight: bold;
-    font-style: normal;
+.our_mission::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
 }
 
-/*Container 2*/
-.team_members{
-    background-color: rgb(234, 216, 177);/*background-color: rgb(232, 92, 13);/**/
-    padding: 1.25rem;
-    border-radius: 0.625rem;
-    border: 0.156rem solid rgb(174, 161, 133);
-
-    margin-bottom: 1.25rem;
-
-    display: grid; /* Use CSS Grid */
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 1.25rem; /* Spacing between the items */
+.our_mission_title {
+    font-size: var(--text-5xl);
+    font-weight: 700;
+    color: var(--neutral-900);
+    margin-bottom: var(--space-6);
+    background: linear-gradient(135deg, var(--primary-800), var(--primary-600));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.member{
-    background-color: rgb(174, 161, 133);/*background-color: rgb(232, 92, 13);/**/
-    padding: 1.25rem;
-    border-radius: 0.625rem;
-    border: 0.156rem solid rgb(130, 121, 100);
+.our_mission_prgph {
+    color: var(--neutral-700);
+    font-size: var(--text-base);
+    line-height: 1.7;
+}
+
+/* Team Members Container */
+.team_members {
+    background: var(--neutral-50);
+    padding: var(--space-8);
+    border-radius: var(--radius-2xl);
+    border: 1px solid var(--neutral-200);
+    box-shadow: var(--shadow-xl);
+    margin-bottom: var(--space-8);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+}
+
+.team_members::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+}
+
+.member {
+    background: var(--gradient-warm);
+    padding: var(--space-6);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--neutral-300);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+}
+
+.member:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
 .member img{
@@ -52,17 +95,48 @@
     font-style: normal;
 }
 
-/*Container 3*/
+/* Video Container */
 .thunder_video_prgrph {
-    background-color: rgb(234, 216, 177);/*background-color: rgb(232, 92, 13);/**/
-    padding: 1.25rem;
-    border-radius: 0.625rem;
-    border: 0.156rem solid rgb(174, 161, 133);
-
+    background: var(--neutral-50);
+    padding: var(--space-8);
+    border-radius: var(--radius-2xl);
+    border: 1px solid var(--neutral-200);
+    box-shadow: var(--shadow-xl);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.thunder_video_prgrph::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+}
+
+.video_title {
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    color: var(--neutral-900);
+    margin-bottom: var(--space-6);
+    background: linear-gradient(135deg, var(--primary-800), var(--primary-600));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.video_prgrph {
+    color: var(--neutral-700);
+    font-size: var(--text-base);
+    line-height: 1.7;
+    text-align: center;
 }
 
 .thunder_video{

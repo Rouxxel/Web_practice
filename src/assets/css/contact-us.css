@@ -1,10 +1,34 @@
-.registration_container{
-    background-color: rgb(234, 216, 177);/*background-color: rgb(232, 92, 13);/**/
-    padding: 1.25rem;
-    border-radius: 0.625rem;
-    border: 0.156rem solid rgb(174, 161, 133);
+.registration_container {
+    background: var(--neutral-50);
+    padding: var(--space-8);
+    border-radius: var(--radius-2xl);
+    border: 1px solid var(--neutral-200);
+    box-shadow: var(--shadow-xl);
+    margin-bottom: var(--space-8);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
 
-    margin-bottom: 1.25rem;
+.registration_container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+}
+
+.register_title {
+    font-size: var(--text-5xl);
+    font-weight: 700;
+    color: var(--neutral-900);
+    margin-bottom: var(--space-6);
+    background: linear-gradient(135deg, var(--primary-800), var(--primary-600));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .register_title{
@@ -26,22 +50,32 @@
     color: #333;
 }
 
-/* Style for input fields */
+/* Modern Input Fields */
 .registration_form input[type="text"],
 .registration_form input[type="password"] {
-    width: 100%; /* Full width input fields */
-    padding: 0.625rem; /* Padding inside the input fields */
-    border: 0.0625rem solid #ccc; /* Light border */
-    border-radius: 0.3125rem; /* Rounded corners */
-    box-sizing: border-box; /* Ensures padding is included in width */
-    font-size: 1rem;
-    transition: border-color 0.3s ease-in-out; /* Smooth transition for border color */
+    width: 100%;
+    padding: var(--space-4);
+    border: 2px solid var(--neutral-300);
+    border-radius: var(--radius-lg);
+    box-sizing: border-box;
+    font-size: var(--text-base);
+    font-family: inherit;
+    background: var(--neutral-50);
+    transition: all var(--transition-normal);
+    box-shadow: var(--shadow-sm);
 }
 
 .registration_form input[type="text"]:focus,
 .registration_form input[type="password"]:focus {
-    border-color: #007bff; /* Blue border on focus */
-    outline: none; /* Remove default outline */
+    border-color: var(--primary-500);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(78, 155, 217, 0.1);
+    transform: translateY(-1px);
+}
+
+.registration_form input[type="text"]:hover,
+.registration_form input[type="password"]:hover {
+    border-color: var(--neutral-400);
 }
 
 /* Error message styling */
@@ -52,26 +86,46 @@
     display: block; /* Error messages on a new line */
 }
 
-/* Submit button styling */
+/* Modern Submit Button */
 .submit_button {
-    width: 8rem; /* Full width button */
-    padding: 0.75rem;
-    background-color: #007bff; /* Blue background */
-    color: white; /* White text */
-    border: none; /* Remove default border */
-    border-radius: 0.3125rem; /* Rounded corners */
-    font-size: 1rem;
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease-in-out; /* Smooth transition on hover */
+    padding: var(--space-4) var(--space-8);
+    background: var(--gradient-primary);
+    color: var(--neutral-50);
+    border: none;
+    border-radius: var(--radius-lg);
+    font-size: var(--text-base);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+    min-width: 140px;
+}
+
+.submit_button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left var(--transition-slow);
 }
 
 .submit_button:hover {
-    background-color: #0056b3; /* Darken button on hover */
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.submit_button:hover::before {
+    left: 100%;
 }
 
 .submit_button:active {
-    background-color: #004085; /* Darker blue on click */
-    box-shadow: inset 0 0.1875rem 0.3125rem rgba(0, 0, 0, 0.125); /* Slight shadow on press */
+    transform: translateY(0);
+    box-shadow: var(--shadow-md);
 }
 
 /* ---------- MEDIA QUERIES ---------- */
