@@ -33,37 +33,60 @@ function get_current_date(){
 }
 
 /*Image and subtext update functions*/
-const img_files=["assets/images/playership.png","assets/images/enemyship.png","assets/images/enemyship2.png"];
-const img_subtexts=["Image by: John Doe", "Image by: Jane Doe", "Image by: Jan Doe"];
-let indx=0;
-
-function update_image(button_dir){
-    if (button_dir === 'right') {
-        if (indx === 2) {
-            indx = 0;
-        } else {
-            indx = indx+1;
-        }
-
-    } else if (button_dir === 'left') {
-        if (indx === 0) {
-            indx = 2;
-        } else {
-            indx = indx-1;
-        }
+const ImageCarousel = (function() {
+    // Private variables (encapsulated)
+    const imgFiles = ["playership.png", "enemyship.png", "enemyship2.png"];
+    const imgSubtexts = ["Image by: John Doe", "Image by: Jane Doe", "Image by: Jan Doe"];
+    let currentIndex = 0;
+    
+    // Get the base path dynamically
+    function getBasePath() {
+        const imgElement = document.getElementById('ship_sprite');
+        if (!imgElement) return '';
+        const currentSrc = imgElement.src;
+        const lastSlash = currentSrc.lastIndexOf('/');
+        return currentSrc.substring(0, lastSlash + 1);
     }
 
-    //Update the image source
-    document.getElementById('ship_sprite').src = img_files[indx];
-    
-    //Update the subtext
-    document.getElementById('image_caption').innerText = img_subtexts[indx];
+    return {
+        updateImage: function(buttonDir) {
+            if (buttonDir === 'right') {
+                currentIndex = (currentIndex + 1) % imgFiles.length;
+            } else if (buttonDir === 'left') {
+                currentIndex = (currentIndex - 1 + imgFiles.length) % imgFiles.length;
+            }
+
+            const basePath = getBasePath();
+            const imgElement = document.getElementById('ship_sprite');
+            const captionElement = document.getElementById('image_caption');
+            
+            if (imgElement) {
+                imgElement.src = basePath + imgFiles[currentIndex];
+            }
+            if (captionElement) {
+                captionElement.innerText = imgSubtexts[currentIndex];
+            }
+        }
+    };
+})();
+
+// Wrapper function for backward compatibility
+function update_image(button_dir) {
+    ImageCarousel.updateImage(button_dir);
 }
 
 /*registration form functionality*/
-function validate_form(){
-    // Select the form using querySelector instead of getElementsByClassName
-    document.querySelector('.registration_form').addEventListener('submit', function(event) {
+const FormValidator = (function() {
+    let isInitialized = false;
+
+    return {
+        init: function() {
+            if (isInitialized) return; // Prevent double initialization
+            
+            const form = document.querySelector('.registration_form');
+            if (!form) return;
+            
+            form.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent form submission
 
         // Clear previous error messages
@@ -120,14 +143,20 @@ function validate_form(){
             hasError = true;
         }
 
-        // If no errors, submit the form
-        if (!hasError) {
-            alert('Form submitted successfully!');
+            // If no errors, submit the form
+            if (!hasError) {
+                alert('Form submitted successfully!');
+            }
+        });
+        
+        isInitialized = true;
         }
-    });
-}
+    };
+})();
 
-// Call the validation function after the DOM is fully loaded (if necessary)
-window.onload = function() {
-    validate_form();
-};
+// Initialize form validation when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', FormValidator.init);
+} else {
+    FormValidator.init();
+}

@@ -19,26 +19,30 @@
     <link rel="stylesheet" href="assets/css/design-system.css"><!-- Design System -->
     <link rel="stylesheet" href="assets/css/general.css"><!-- Shared CSS -->
     <link rel="stylesheet" href="assets/css/home.css"><!-- Specific CSS -->
+    <link rel="stylesheet" href="assets/css/accessibility.css"><!-- Accessibility -->
     <link rel="icon" type="image/x-icon" href="assets/images/logo.ico">
 </head>
 
 <!-- Web page itself -->
 
 <body>
+    <!-- Skip to content link for keyboard users -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
     <!-- JavaScript file link -->
-    <script src="assets/js/methods.js"></script>
+    <script src="assets/js/methods.js" defer></script>
 
     <!-- Header with title, logo and navigation -->
-    <header class="header">
+    <header class="header" role="banner">
         <div class="left_group">
             <div class="logo_name">
-                <img src="assets/images/logo.png" alt="Logo" id="logo_file">
+                <img src="assets/images/logo.png" alt="Web X Logo" id="logo_file">
                 <h1 class="website_main_title">Web X</h1>
             </div>
         </div>
 
         <div class="center_group">
-            <div class="current_page">
+            <div class="current_page" aria-label="Current page">
                 Home
             </div>
         </div>
@@ -46,21 +50,21 @@
         <div class="right_group">
         </div>
 
-        <div class="date_time">
-            <div class="time" id="times_display">
+        <div class="date_time" role="status" aria-live="polite" aria-label="Current date and time">
+            <div class="time" id="times_display" aria-label="Current time">
                 HH:MM 24H
             </div>
-            <div class="date" id="date_display">
+            <div class="date" id="date_display" aria-label="Current date">
                 DD/MM/YY
             </div>
         </div>
 
-        <div class="nav_bar">
-            <a href="#">Home</a>
+        <nav class="nav_bar" role="navigation" aria-label="Main navigation">
+            <a href="#" aria-current="page">Home</a>
             <a href="pages/about-us.html">About us</a>
             <a href="pages/contact-us.html">Contact us</a>
             <a href="pages/credits.html">Credits</a>
-        </div>
+        </nav>
 
         <!-- Call functions to update date and time -->
         <script>
@@ -76,8 +80,8 @@
     <hr style="border: 0.09rem solid black; width: 100%;">
 
     <!-- Whole actual body -->
-    <div class="main_content">
-        <div class="main_container">
+    <main id="main-content" class="main_content" role="main">
+        <article class="main_container">
             <h1 class="main_title">
                 Main title
             </h1>
@@ -110,9 +114,9 @@
                     culpa qui officia deserunt mollit anim id est laborum.
                 </aside>
             </div>
-        </div>
+        </article>
 
-        <div class="second_container">
+        <article class="second_container">
             <h1 class="second_main_title">
                 Second title
             </h1>
@@ -133,18 +137,16 @@
                 <div class="buttons_image">
                     <div class="img_author">
                         <figure class="img_fig">
-                            <img src="assets/images/playership.png" alt="sprite here" id="ship_sprite">
+                            <img src="assets/images/playership.png" alt="Pixel art spaceship sprite" id="ship_sprite">
                             <figcaption class="image_caption" id="image_caption">
                                 Image by: John Doe
                             </figcaption>
                         </figure>
                     </div>
 
-                    <div class="buttons">
-                        <button class="l_arrow_button" onclick="update_image('left')">&larr;</button>
-                        <!-- Right Arrow -->
-                        <button class="r_arrow_button" onclick="update_image('right')">&rarr;</button>
-                        <!-- Right Arrow -->
+                    <div class="buttons" role="group" aria-label="Image carousel controls">
+                        <button class="l_arrow_button" onclick="update_image('left')" aria-label="Previous image">&larr;</button>
+                        <button class="r_arrow_button" onclick="update_image('right')" aria-label="Next image">&rarr;</button>
                     </div>
                 </div>
 
@@ -156,56 +158,56 @@
                     culpa qui officia deserunt mollit anim id est laborum.
                 </article>
             </div>
-        </div>
-    </div>
+        </article>
+    </main>
 
     <!-- Header-body separation line -->
     <hr style="border: 0.09rem solid black; width: 100%;">
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="socials_img_row">
-            <a href="https://www.instagram.com/instagram/">
-                <img src="assets/images/instagram.png" alt="insta" id="instagram_file">
+    <footer class="footer" role="contentinfo">
+        <nav class="socials_img_row" aria-label="Social media links">
+            <a href="https://www.instagram.com/instagram/" rel="noopener noreferrer" target="_blank" aria-label="Visit our Instagram page">
+                <img src="assets/images/instagram.png" alt="Instagram" id="instagram_file">
             </a>
-            <a href="https://x.com/X?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
-                <img src="assets/images/twitter.png" alt="twitter" id="twitter_file">
+            <a href="https://x.com/X?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" rel="noopener noreferrer" target="_blank" aria-label="Visit our Twitter page">
+                <img src="assets/images/twitter.png" alt="Twitter" id="twitter_file">
             </a>
-            <a href="https://www.youtube.com/@YouTube">
-                <img src="assets/images/youtube.png" alt="youtb" id="youtube_file">
+            <a href="https://www.youtube.com/@YouTube" rel="noopener noreferrer" target="_blank" aria-label="Visit our YouTube channel">
+                <img src="assets/images/youtube.png" alt="YouTube" id="youtube_file">
             </a>
-            <a href="https://www.linkedin.com/company/linkedin/posts/?feedView=all">
-                <img src="assets/images/linkedin.png" alt="linkd" id="linkedin_file">
+            <a href="https://www.linkedin.com/company/linkedin/posts/?feedView=all" rel="noopener noreferrer" target="_blank" aria-label="Visit our LinkedIn page">
+                <img src="assets/images/linkedin.png" alt="LinkedIn" id="linkedin_file">
             </a>
-            <a href="https://www.reddit.com/r/reddit/">
-                <img src="assets/images/reddit.png" alt="reddit" id="reddit_file">
+            <a href="https://www.reddit.com/r/reddit/" rel="noopener noreferrer" target="_blank" aria-label="Visit our Reddit community">
+                <img src="assets/images/reddit.png" alt="Reddit" id="reddit_file">
             </a>
-            <a href="https://discord.com/servers">
-                <img src="assets/images/discord.png" alt="discord" id="discord_file">
+            <a href="https://discord.com/servers" rel="noopener noreferrer" target="_blank" aria-label="Join our Discord server">
+                <img src="assets/images/discord.png" alt="Discord" id="discord_file">
             </a>
-        </div>
+        </nav>
 
-        <div class="worldwide_locations">
-            <a href="https://en.wikipedia.org/wiki/Europe">Europe</a>
-            <h4>|</h4>
-            <a href="https://en.wikipedia.org/wiki/North_America">North America</a>
-            <h4>|</h4>
-            <a href="https://en.wikipedia.org/wiki/Americas">The Americas</a>
-            <h4>|</h4>
-            <a href="https://en.wikipedia.org/wiki/Asia">Asia</a>
-            <h4>|</h4>
-            <a href="https://en.wikipedia.org/wiki/Africa">Africa</a>
-            <h4>|</h4>
-            <a href="https://en.wikipedia.org/wiki/Oceania">Oceania</a>
-        </div>
+        <nav class="worldwide_locations" aria-label="Regional links">
+            <a href="https://en.wikipedia.org/wiki/Europe" rel="noopener noreferrer" target="_blank">Europe</a>
+            <h4 aria-hidden="true">|</h4>
+            <a href="https://en.wikipedia.org/wiki/North_America" rel="noopener noreferrer" target="_blank">North America</a>
+            <h4 aria-hidden="true">|</h4>
+            <a href="https://en.wikipedia.org/wiki/Americas" rel="noopener noreferrer" target="_blank">The Americas</a>
+            <h4 aria-hidden="true">|</h4>
+            <a href="https://en.wikipedia.org/wiki/Asia" rel="noopener noreferrer" target="_blank">Asia</a>
+            <h4 aria-hidden="true">|</h4>
+            <a href="https://en.wikipedia.org/wiki/Africa" rel="noopener noreferrer" target="_blank">Africa</a>
+            <h4 aria-hidden="true">|</h4>
+            <a href="https://en.wikipedia.org/wiki/Oceania" rel="noopener noreferrer" target="_blank">Oceania</a>
+        </nav>
 
-        <div class="policies_row">
-            <a href="https://en.wikipedia.org/wiki/Policy">Terms of Use</a>
-            <h4>|</h4>
-            <a href="https://en.wikipedia.org/wiki/Privacy_policy">Privacy Policy</a>
-            <h4>|</h4>
-            <a href="https://en.wikipedia.org/wiki/HTTP_cookie">Cookie Policy</a>
-        </div>
+        <nav class="policies_row" aria-label="Legal and policy links">
+            <a href="https://en.wikipedia.org/wiki/Policy" rel="noopener noreferrer" target="_blank">Terms of Use</a>
+            <h4 aria-hidden="true">|</h4>
+            <a href="https://en.wikipedia.org/wiki/Privacy_policy" rel="noopener noreferrer" target="_blank">Privacy Policy</a>
+            <h4 aria-hidden="true">|</h4>
+            <a href="https://en.wikipedia.org/wiki/HTTP_cookie" rel="noopener noreferrer" target="_blank">Cookie Policy</a>
+        </nav>
 
         <h4 class="rights_text">2024 Web X, Inc. Released under the MIT License.</h4>
     </footer>
