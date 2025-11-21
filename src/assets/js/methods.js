@@ -1,3 +1,77 @@
+/*CSRF Token Management*/
+const CSRFProtection = (function() {
+    const TOKEN_KEY = 'csrf_token';
+    const TOKEN_EXPIRY_KEY = 'csrf_token_expiry';
+    const TOKEN_LIFETIME = 3600000; // 1 hour in milliseconds
+
+    function generateToken() {
+        // Generate a random token using crypto API if available
+        if (window.crypto && window.crypto.getRandomValues) {
+            const array = new Uint8Array(32);
+            window.crypto.getRandomValues(array);
+            return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+        } else {
+            // Fallback for older browsers
+            return 'csrf_' + Math.random().toString(36).substring(2) + Date.now().toString(36);
+        }
+    }
+
+    function getToken() {
+        const token = sessionStorage.getItem(TOKEN_KEY);
+        const expiry = sessionStorage.getItem(TOKEN_EXPIRY_KEY);
+        
+        // Check if token exists and is not expired
+        if (token && expiry && Date.now() < parseInt(expiry)) {
+            return token;
+        }
+        
+        // Generate new token if expired or doesn't exist
+        const newToken = generateToken();
+        const newExpiry = Date.now() + TOKEN_LIFETIME;
+        
+        sessionStorage.setItem(TOKEN_KEY, newToken);
+        sessionStorage.setItem(TOKEN_EXPIRY_KEY, newExpiry.toString());
+        
+        return newToken;
+    }
+
+    function validateToken(token) {
+        const storedToken = sessionStorage.getItem(TOKEN_KEY);
+        const expiry = sessionStorage.getItem(TOKEN_EXPIRY_KEY);
+        
+        if (!storedToken || !expiry) {
+            return false;
+        }
+        
+        if (Date.now() >= parseInt(expiry)) {
+            return false;
+        }
+        
+        return token === storedToken;
+    }
+
+    function injectTokenIntoForm(form) {
+        // Remove existing CSRF token input if present
+        const existingToken = form.querySelector('input[name="csrf_token"]');
+        if (existingToken) {
+            existingToken.remove();
+        }
+        
+        // Create and inject new CSRF token
+        const tokenInput = document.createElement('input');
+        tokenInput.type = 'hidden';
+        tokenInput.name = 'csrf_token';
+        tokenInput.value = getToken();
+        form.appendChild(tokenInput);
+    }
+
+    return {
+        getToken: getToken,
+        validateToken: validateToken,
+        injectTokenIntoForm: injectTokenIntoForm
+    };
+})();
+
 /*Date and time update functions*/
 function get_current_time() {
     // Create a new Date object for the current date and time
@@ -86,14 +160,26 @@ const FormValidator = (function() {
             const form = document.querySelector('.registration_form');
             if (!form) return;
             
+            // Inject CSRF token into form
+            CSRFProtection.injectTokenIntoForm(form);
+            
             form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent form submission
+                event.preventDefault(); // Prevent form submission
 
-        // Clear previous error messages
-        const errors = document.querySelectorAll('.error');
-        errors.forEach(error => error.textContent = '');
+                // Clear previous error messages
+                const errors = document.querySelectorAll('.error');
+                errors.forEach(error => error.textContent = '');
 
-        // Get form values
+                // Validate CSRF token
+                const csrfToken = form.querySelector('input[name="csrf_token"]');
+                if (!csrfToken || !CSRFProtection.validateToken(csrfToken.value)) {
+                    alert('Security token validation failed. Please refresh the page and try again.');
+                    // Regenerate token
+                    CSRFProtection.injectTokenIntoForm(form);
+                    return;
+                }
+
+                // Get form values
         const firstName = document.getElementById('firstName').value.trim();
         const lastName = document.getElementById('lastName').value.trim();
         const email = document.getElementById('email').value.trim();
@@ -143,13 +229,21 @@ const FormValidator = (function() {
             hasError = true;
         }
 
-            // If no errors, submit the form
-            if (!hasError) {
-                alert('Form submitted successfully!');
-            }
-        });
-        
-        isInitialized = true;
+                // If no errors, submit the form
+                if (!hasError) {
+                    // In a real application, this would send data to a server
+                    // For now, we'll just show success and regenerate token
+                    alert('Form submitted successfully!');
+                    
+                    // Regenerate CSRF token for next submission
+                    CSRFProtection.injectTokenIntoForm(form);
+                    
+                    // Reset form
+                    form.reset();
+                }
+            });
+            
+            isInitialized = true;
         }
     };
 })();
